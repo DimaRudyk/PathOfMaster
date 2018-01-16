@@ -1,0 +1,66 @@
+﻿@model DimaMaster.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CarService.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarService.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.LFM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.LFM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.LFM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.LFM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Service.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Service.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vendor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
