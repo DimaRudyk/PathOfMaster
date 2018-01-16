@@ -237,6 +237,11 @@
     <Content Include="Views\Orders\Details.cshtml" />
     <Content Include="Views\Orders\Edit.cshtml" />
     <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\Home\TopClients.cshtml" />
+    <Content Include="Views\Home\TopProfitServices.cshtml" />
+    <Content Include="Views\Home\TopServices.cshtml" />
+    <Content Include="Views\Home\TopEmployee.cshtml" />
+    <Content Include="Views\Home\MostProfitableEmployee.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
