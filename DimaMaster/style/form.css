@@ -1,0 +1,166 @@
+.foxerror {
+    background: url( ./../images/fox404.png) no-repeat center center fixed;
+    width: 1880px;
+    height: 624px;
+    background-size: auto;
+}
+.wrapper-padding {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.login_bg {
+    background: url(http://www.webdesignhot.com/wp-content/uploads/2016/09/Orange-Abstract-Geometric-Background.jpg);
+    background: url(http://oboi-colibri.ru/wp-content/uploads/2013/11/geometriya-2.jpg);
+    background: url(https://wallpaper.feodosia.net/media/_thumbs/wallpaper/texture/128107-1920x1080.jpg.600x450_q85_crop.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    min-height: 526px;
+}
+.login-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-60%);
+}
+.login_logo {
+    text-align: center;
+}
+.login_logo img {
+    max-width: 220px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.form-signin {
+    width: 420px;
+    max-width: 86%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 1px 2px 10px 0px #cecece;
+    border-top: 4px solid #e3670d;
+    padding: 15px 35px 15px;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    color: #e3670d;
+    font-size: 1.8rem;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 0;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin .btn {
+    margin: 20px 0;
+}
+.form-signin label {
+    font-weight: 400;
+    margin-top: 15px;
+}
+.btn{
+    transition: all 0.2s;
+}
+.btn-light {
+    background-color: #f4f4f4;
+    color: #444;
+    border-color: #ddd;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 6px 12px;
+}
+.navbar-link {
+    padding: 15px;
+    color: #fff;
+}
+.navbar-link:hover {
+    background: rgba(0,0,0,0.1);
+    color: #f6f6f6;
+    text-decoration: none;
+}
+.btn-back:hover {
+    text-decoration: none;
+    color: #333;
+}
+.btn-primary{
+    border: 0;
+    border-radius: 0;
+    background-color: #50beff;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:active:hover,
+.btn-primary:active:focus {
+    background-color: #279fe6;
+}
+.btn-login {
+    background-color: #e3670d;
+}
+.btn-login:hover,
+.btn-login:focus,
+.btn-login:active,
+.btn-login:visited,
+.btn-login:active:hover,
+.btn-login:active:focus {
+    background-color: #da5c00;
+}
+.forgot-pass_link {
+    background-color: #f5f5f5;
+    line-height: 54px;
+    text-align: center;
+}
+.forgot-pass_link a{
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.forgot-pass_link a:hover {
+    color: #50beff;
+}
+.login-footer {
+    text-align: center;
+    line-height: 50px;
+}
+.jet-box .dx-button-default {
+    border: 0;
+    border-radius: 0;
+    background-color: #e3670d;
+    margin: 30px auto;
+    text-align: center;
+}
+.jet-box .dx-button-default.dx-state-hover,
+.jet-box .dx-button-default.dx-state-active,
+.jet-box .dx-button-default.dx-state-focused {
+    background-color: #a94700;
+    border-color: #a94700;
+}
+@media screen and (max-width: 620px) {
+        .form-signin {
+        max-width: 70%;
+        box-shadow: 1px 2px 4px 0px #cecece;
+        padding: 0px 10px 5px;
+    }
+    .login-wrapper {
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .login_logo img {
+        max-width: 160px;
+    }
+}
