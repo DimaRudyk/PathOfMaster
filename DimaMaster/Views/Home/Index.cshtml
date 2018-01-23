@@ -4,9 +4,32 @@
 
 <div id="topCarServices" style="display:none" data-json="@ViewBag.topCarServices"></div>
 
+<div id="topProiftServices" style="display:none" data-json="@ViewBag.topProiftServices"></div>
+
+<div id="topEmployeeCount" style="display:none" data-json="@ViewBag.topEmployeeCount"></div>
+
+<div id="mostProfitableEmployee" style="display:none" data-json="@ViewBag.mostProfitableEmployee"></div>
+
+
+
 <div class="container">
     <div class="demo-container" ng-app="DemoApp" ng-controller="DemoController">
-        <div id="pie" dx-pie-chart="chartOptions"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="pie" dx-pie-chart="chartOptions"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="pie2" dx-pie-chart="topEmployeeCountChart"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="pie3" dx-pie-chart="mostProfitableEmployeeChart"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="pie4" dx-pie-chart="chartOptionsClients"></div>
+            </div>
+        </div>
     </div>
 </div>
 

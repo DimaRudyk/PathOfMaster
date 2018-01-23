@@ -67,10 +67,32 @@ namespace DimaMaster.Controllers
                           {
                               Lfm = x.Key.Name,
                               TotalSum = x.Sum(w => w.Service.Cost)
-                          }).OrderByDescending(x => x.TotalSum).Take(20);
+                          }).OrderByDescending(x => x.TotalSum).Take(10);
 
             ViewBag.topCarServices = JsonConvert.SerializeObject(topCarServices);
+            ViewBag.topProiftServices = JsonConvert.SerializeObject((from order in db.Orders.AsNoTracking()
+                                                                     group order by order.Service
+                          ).Select(x => new TopClientsView
+                          {
+                              Lfm = x.Key.Name,
+                              TotalSum = x.Sum(w => w.Service.Cost)
+                          }).OrderByDescending(x => x.TotalSum).Take(10));
 
+            ViewBag.topEmployeeCount = JsonConvert.SerializeObject((from order in db.Orders.AsNoTracking()
+                                                               group order by order.Employee
+                          ).Select(x => new BestEmployee
+                          {
+                              Lfm = x.Key.LFM,
+                              Count = x.Count()
+                          }).OrderByDescending(x => x.Count).Take(10));
+            ViewBag.mostProfitableEmployee = JsonConvert.SerializeObject((from order in db.Orders.AsNoTracking()
+                                                                          group order by order.Employee
+                          ).Select(x => new MostProfitableEmployee
+                          {
+                              Lfm = x.Key.LFM,
+                              TotalSum = x.Sum(w => w.Service.Cost)
+                          }).OrderByDescending(x => x.TotalSum).Take(10));
+            
             return View("Index");
         }
         public ActionResult Reports()
