@@ -3,7 +3,6 @@
 @{
     ViewBag.Title = "MostProfitableEmployee";
 }
-
 <div class="navbar navbar-inverse">
     <div class="container">
 
@@ -22,6 +21,35 @@
         </div>
     </div>
 </div>
+@*<div id="topCarServices" style="display:none" data-json="@ViewBag.topCarServices"></div>
+
+<div id="topProiftServices" style="display:none" data-json="@ViewBag.topProiftServices"></div>
+
+<div id="topEmployeeCount" style="display:none" data-json="@ViewBag.topEmployeeCount"></div>*@
+
+<div id="mostProfitableEmployee" style="display:none" data-json="@(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Take(10)))"></div>
+
+
+<div class="container">
+    <div class="demo-container" ng-app="DemoApp" ng-controller="DemoController">
+       
+        <div class="row">
+            <div class="col-md-12">
+
+                <div id="pie3" dx-chart="mostProfitableEmployeeChart"></div>
+
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/HomeChartsData.js"></script>
+<script src="~/Scripts/HomeCharts.js"></script>
+
+
 
 <h2>MostProfitableEmployee</h2>
 

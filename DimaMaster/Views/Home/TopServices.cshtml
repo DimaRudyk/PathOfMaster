@@ -22,7 +22,27 @@
         </div>
     </div>
 </div>
+<div id="topEmployeeCount" style="display:none" data-json="@(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x=> new { Lfm = x.ServiceName, x.Count}).Take(5)))"></div>
 
+
+<div class="container">
+    <div class="demo-container" ng-app="DemoApp" ng-controller="DemoController">
+
+        <div class="row">
+            <div class="col-md-8" ng-init="topEmployeeCountChart.title = 'Rank Services by count order'">
+
+                <div id="pie2" dx-chart="topEmployeeCountChart"></div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/HomeChartsData.js"></script>
+<script src="~/Scripts/HomeCharts.js"></script>
 <h2>TopServices</h2>
 
 

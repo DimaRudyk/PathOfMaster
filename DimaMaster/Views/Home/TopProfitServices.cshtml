@@ -22,7 +22,27 @@
         </div>
     </div>
 </div>
+<div id="topProiftServices" style="display:none" data-json="@(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Take(10)))"></div>
 
+
+<div class="container">
+    <div class="demo-container" ng-app="DemoApp" ng-controller="DemoController">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div id="pie4" dx-pie-chart="chartOptionsClients"></div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/HomeChartsData.js"></script>
+<script src="~/Scripts/HomeCharts.js"></script>
 <h2>TopProfitServices</h2>
 
 

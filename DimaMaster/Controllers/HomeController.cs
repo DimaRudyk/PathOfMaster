@@ -102,6 +102,7 @@ namespace DimaMaster.Controllers
         }
         public ActionResult TopClients()
         {
+
             var request = (from order in db.Orders.AsNoTracking()
                            group order by order.Car.Client
                            ).Select(x => new TopClientsView
