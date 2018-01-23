@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Newtonsoft.Json;
 
 namespace DimaMaster.Controllers
 {
@@ -42,6 +43,21 @@ namespace DimaMaster.Controllers
         private Model1 db = new Model1();
         public ActionResult Index()
         {
+            var topCarServices = (from order in db.Orders.AsNoTracking()
+                                  group order by order.Service
+                          ).Select(x => new TopClientsView
+                          {
+                              Lfm = x.Key.Name,
+                              TotalSum = x.Sum(w => w.Service.Cost)
+                          }).OrderByDescending(x => x.TotalSum);
+
+            ViewBag.topCarServices = JsonConvert.SerializeObject(topCarServices);
+
+            return View();
+        }
+        public ActionResult Reports()
+        {
+
             return View();
         }
         public ActionResult TopClients()
@@ -97,7 +113,7 @@ namespace DimaMaster.Controllers
                           ).Select(x => new MostProfitableEmployee
                           {
                               Lfm = x.Key.LFM,
-                              TotalSum = x.Sum(w=>w.Service.Cost)
+                              TotalSum = x.Sum(w => w.Service.Cost)
                           }).OrderByDescending(x => x.TotalSum);
             return View(request.ToList());
         }

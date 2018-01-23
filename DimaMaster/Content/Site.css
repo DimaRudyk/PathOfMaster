@@ -22,3 +22,10 @@ select,
 textarea {
     max-width: 280px;
 }
+#pie {
+    height: 440px;
+}
+.navbar-fixed-top {
+    position: relative !important;
+    margin-bottom: 0px !important;
+}
