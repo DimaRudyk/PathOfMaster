@@ -10,8 +10,7 @@ namespace DimaMaster.Models
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Client()
-        {
-            Orders = new HashSet<Order>();
+        { 
         }
 
         public int ClientId { get; set; }
@@ -22,7 +21,6 @@ namespace DimaMaster.Models
         [Required]
         public string PhoneNumber { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Car> Cars { get; set; } = new HashSet<Car>();
     }
 }

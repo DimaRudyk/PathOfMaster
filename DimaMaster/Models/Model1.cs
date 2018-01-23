@@ -18,6 +18,8 @@ namespace DimaMaster.Models
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Place> Places { get; set; }
         public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<Car> Cars { get; set; }
+
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -27,20 +29,7 @@ namespace DimaMaster.Models
                 .WithRequired(e => e.CarService)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<CarService>()
-                .HasMany(e => e.Orders)
-                .WithRequired(e => e.CarService)
-                .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<CarService>()
-                .HasMany(e => e.Services)
-                .WithMany(e => e.CarServices)
-                .Map(m => m.ToTable("CarServiceToService").MapLeftKey("CarServiceId").MapRightKey("ServiceId"));
-
-            modelBuilder.Entity<Client>()
-                .HasMany(e => e.Orders)
-                .WithRequired(e => e.Client)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Employee>()
                 .HasMany(e => e.Orders)

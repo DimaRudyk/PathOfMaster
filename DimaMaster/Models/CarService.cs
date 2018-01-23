@@ -13,8 +13,6 @@ namespace DimaMaster.Models
         public CarService()
         {
             Employees = new HashSet<Employee>();
-            Orders = new HashSet<Order>();
-            Services = new HashSet<Service>();
         }
 
         public int CarServiceId { get; set; }
@@ -34,10 +32,6 @@ namespace DimaMaster.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employee> Employees { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Service> Services { get; set; }
     }
 }
