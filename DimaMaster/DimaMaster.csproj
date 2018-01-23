@@ -150,14 +150,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BestEmployee.cs" />
     <Compile Include="Controllers\CarsController.cs" />
     <Compile Include="Controllers\CarServicesController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MostOrderedServices.cs" />
+    <Compile Include="Controllers\MostProfitableEmployee.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\PlacesController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\TopClientsView.cs" />
+    <Compile Include="Controllers\TopServicesView.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -193,6 +198,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="russian_names.json" />
+    <Content Include="russian_surnames.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\HomeCharts.js" />
     <Content Include="Scripts\HomeChartsData.js" />
