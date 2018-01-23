@@ -15,18 +15,27 @@
 <div class="container">
     <div class="demo-container" ng-app="DemoApp" ng-controller="DemoController">
         <div class="row">
-            <div class="col-md-6">
-                <div id="pie" dx-pie-chart="chartOptions"></div>
-            </div>
-            <div class="col-md-6">
-                <div id="pie2" dx-pie-chart="topEmployeeCountChart"></div>
+
+            <div class="col-md-12">
+                <div id="pie2" dx-chart="topEmployeeCountChart"></div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <div id="pie3" dx-pie-chart="mostProfitableEmployeeChart"></div>
+            <div class="col-md-12">
+
+                <div id="pie3" dx-chart="mostProfitableEmployeeChart"></div>
+
             </div>
-            <div class="col-md-6">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div id="pie" dx-pie-chart="chartOptions"></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div id="pie4" dx-pie-chart="chartOptionsClients"></div>
             </div>
         </div>

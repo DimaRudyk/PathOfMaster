@@ -9,6 +9,7 @@ DemoApp.controller('DemoController', function DemoController($scope) {
 
     $scope.topEmployeeCountChart = {
         palette: "bright",
+        rotated: true,
         dataSource: topEmployeeCount,
         title: "Rank Employee by count of orders",
         legend: {
@@ -19,32 +20,25 @@ DemoApp.controller('DemoController', function DemoController($scope) {
             columnCount: 4
         },
         "export": {
-            enabled: true
+            enabled: false
         },
-        series: [{
-            argumentField: "Lfm",
-            valueField: "Count",
+        series: {
             label: {
                 visible: true,
-                font: {
-                    size: 16
-                },
-                connector: {
-                    visible: true,
-                    width: 0.5
-                },
-                position: "columns",
-                customizeText: function (arg) {
-                    return arg.valueText + " (" + arg.percentText + ")";
-                }
-            }
-        }]
+                backgroundColor: "#c18e92"
+            },
+            color: "#79cac4",
+            type: "bar",
+            argumentField: "Lfm",
+            valueField: "Count"
+        }
     };
 
     $scope.mostProfitableEmployeeChart = {
         palette: "bright",
         dataSource: mostProfitableEmployee,
         title: "Rank Employee by profit",
+        rotated: true,
         legend: {
             orientation: "horizontal",
             itemTextPosition: "right",
@@ -55,9 +49,11 @@ DemoApp.controller('DemoController', function DemoController($scope) {
         "export": {
             enabled: true
         },
+
         series: [{
             argumentField: "Lfm",
             valueField: "TotalSum",
+            type: "bar",
             label: {
                 visible: true,
                 font: {
@@ -69,7 +65,7 @@ DemoApp.controller('DemoController', function DemoController($scope) {
                 },
                 position: "columns",
                 customizeText: function (arg) {
-                    return arg.valueText + " (" + arg.percentText + ")";
+                    return arg.valueText + '($)';
                 }
             }
         }]
